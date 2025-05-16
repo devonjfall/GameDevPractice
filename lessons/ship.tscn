@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3biam3roqtgp"]
+
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_kkjbn"]
+[ext_resource type="Script" path="res://lessons/ship.gd" id="2_eiufg"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(239, 549)
+texture = ExtResource("1_kkjbn")
+script = ExtResource("2_eiufg")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
